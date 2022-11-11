@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Increment and Reset counter</p>
+    <p id="count"></p>
+    <button id="inc">+</button>
+    <button id="reset">reset</button>
+
+    <script>
+      let inc = document.getElementById("inc");
+      let reset = document.getElementById("reset");
+      let count = document.getElementById("count");
+
+      let c = 0;
+      count.innerText = `${c}`;
+
+      inc.addEventListener("click", () => {
+        c++;
+        count.innerText = `${c}`;
+      });
+
+      reset.addEventListener("click", () => {
+        c = 0;
+        count.innerText = `${c}`;
+      });
+    </script>
+  </body>
+</html>
