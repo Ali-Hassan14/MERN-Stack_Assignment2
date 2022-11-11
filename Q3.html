@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="numrange" value="0" />
+    <div id="fibnocci"></div>
+    <div id="checkfibnocci"></div>
+    <button type="button" onclick="febo()">Check Fibnocci Series</button>
+
+    <script>
+      function febo() {
+        var num = document.getElementById("numrange").value;
+
+        if (num <= 0) {
+          document.write("Invalid Number, Enter a positive integer.");
+        } else {
+          for (var i = 0; i < num; i++) {
+            document.write(fibonaccix(i) + " ");
+          }
+        }
+      }
+      function fibonaccix(num) {
+        if (num < 2) {
+          return num;
+        } else {
+          return fibonaccix(num - 1) + fibonaccix(num - 2);
+        }
+      }
+    </script>
+  </body>
+</html>
