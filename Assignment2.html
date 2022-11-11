@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="firstnum" value="0" />
+    <div id="checknum"></div>
+    <button type="button" onclick="check()">Check Number</button>
+
+    <script>
+      function check() {
+        var num1 = document.getElementById("firstnum").value;
+
+        if (isNaN(num1)) {
+          var st = "Not Valid Number";
+          document.getElementById("checknum").innerHTML = st;
+        } else {
+          if (num1 == 0) {
+            var st1 = "Number is Zero";
+            document.getElementById("checknum").innerHTML = st1;
+          } else if (num1 > 0) {
+            var st2 = "Valid Positive Number";
+            document.getElementById("checknum").innerHTML = st2;
+          } else {
+            var st3 = "Valid Negative Number";
+            document.getElementById("checknum").innerHTML = st3;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
